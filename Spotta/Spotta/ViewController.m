@@ -72,9 +72,10 @@
         CGFloat imageWidth = image.extent.size.width;
         CGFloat imageHeight = image.extent.size.height;
         // just shrink to just the one rotate, unecessary caveman rotate (HOWDOYOU) here. like what is this, the boonies?
-        self.fuckingFastTransform = CGAffineTransformMakeTranslation(imageWidth/2, imageHeight/2);
+        self.fuckingFastTransform = CGAffineTransformMakeScale(0.4, 0.4);
+        self.fuckingFastTransform = CGAffineTransformTranslate(self.fuckingFastTransform, imageWidth/2, imageHeight/2);
         self.fuckingFastTransform = CGAffineTransformRotate(self.fuckingFastTransform, -M_PI_2);
-        self.fuckingFastTransform = CGAffineTransformTranslate(self.fuckingFastTransform, -imageWidth/2, -imageHeight);
+        self.fuckingFastTransform = CGAffineTransformTranslate(self.fuckingFastTransform, -imageWidth/2, -imageHeight/2);
     }
 
     //CIImage *transformedImage = [image imageByApplyingTransform:self.fuckingFastTransform];
